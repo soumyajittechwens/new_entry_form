@@ -15,6 +15,8 @@ class _EntryFormTechwensState extends State<EntryFormTechwens> {
   TextEditingController phoneController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController countryController = TextEditingController();
+  TextEditingController lookingController = TextEditingController();
+  TextEditingController detailsReqController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -331,6 +333,113 @@ class _EntryFormTechwensState extends State<EntryFormTechwens> {
       )
 
       ],
+              ),
+            ),
+            Padding(
+              padding:
+              const EdgeInsets.symmetric(horizontal: 16.0, vertical: 4.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                    child: Text(
+                      'Looking For',
+                      style: TextStyle(
+                        fontWeight: FontWeight.normal,
+                        color: const Color(0xFF000000).withOpacity(0.6),
+                        fontSize: 18,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        child: Row(
+          children: [
+            Expanded(
+              child: TextFormField(
+                cursorColor: Colors.black,
+                controller: lookingController,
+                keyboardType: TextInputType.text,
+                textInputAction: TextInputAction.next,
+                style: TextStyle(color: const Color(0xFF000000).withOpacity(0.8)),
+                decoration: InputDecoration(
+                  hintText: '',
+                  prefixIcon: Icon(Icons.flag, size: 20),
+                  hintStyle: TextStyle(color: Colors.grey),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0)),
+                  contentPadding: EdgeInsets.symmetric(
+                      vertical: 10.0,
+                      horizontal: 10.0),
+                ),
+              // Makes the text field non-editable
+                onTap: () {
+                  // Show the country picker dialog when the text field is tapped
+
+                },
+              ),
+            ),
+          ],
+        ),
+      )
+
+      ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                  horizontal: 16.0, vertical: 4.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                          child: Text(
+                            'Details Requirement',
+                            style: TextStyle(
+                              fontWeight: FontWeight.normal,
+                              color: const Color(0xFF000000).withOpacity(0.6),
+                              fontSize: 18,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 5),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          child: TextFormField(
+                            cursorColor: Colors.black,
+                            controller: detailsReqController,
+                            // Your TextEditingController for meeting location
+                            keyboardType: TextInputType.multiline,
+                            maxLines: null,
+                            textInputAction: TextInputAction.next,
+                            style: TextStyle(
+                                color: const Color(0xFF000000).withOpacity(
+                                    0.8)),
+                            decoration: InputDecoration(
+                              hintText: '',
+                              prefixIcon: Icon(Icons.meeting_room, size: 20),
+                              // Icon size
+                              hintStyle: TextStyle(color: Colors.grey),
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10.0)),
+                              contentPadding: EdgeInsets.symmetric(
+                                  vertical: 10.0, horizontal: 10.0),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  // Add some spacing between fields
+
+                ],
               ),
             ),
 
