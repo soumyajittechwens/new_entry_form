@@ -42,6 +42,7 @@ dependencies:
   pdf: ^3.6.0
   pdf_image_renderer: ^0.7.0 # For rendering images if needed
   path_provider: ^2.0.11
+  country_picker: ^2.0.26
 
 
 
